@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="NAuth.Maui.Views.ProfilePage"
+             Title="Perfil">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            
+            <Label Text="Meu Perfil" 
+                   FontSize="32" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10"/>
+
+            <Frame BorderColor="{StaticResource Primary}" 
+                   CornerRadius="100"
+                   Padding="0"
+                   WidthRequest="120"
+                   HeightRequest="120"
+                   HorizontalOptions="Center"
+                   HasShadow="True">
+                <Image Source="{Binding ImageUrl}" 
+                       Aspect="AspectFill"
+                       WidthRequest="120"
+                       HeightRequest="120">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding UploadImageCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+
+            <Button Text="Alterar Foto" 
+                    Command="{Binding UploadImageCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="{StaticResource Primary}"
+                    FontSize="12"
+                    HorizontalOptions="Center"
+                    Margin="0,-10,0,0"/>
+
+            <Frame BorderColor="{StaticResource Primary}" 
+                   HasShadow="True"
+                   Padding="0"
+                   CornerRadius="10">
+                <VerticalStackLayout Padding="20" Spacing="15">
+                    
+                    <Label Text="Nome Completo" FontSize="14" TextColor="{StaticResource Gray600}"/>
+                    <Entry Text="{Binding Name}" 
+                           Placeholder="Digite seu nome completo"
+                           ReturnType="Next"/>
+
+                    <Label Text="E-mail" FontSize="14" TextColor="{StaticResource Gray600}"/>
+                    <Entry Text="{Binding Email}" 
+                           Placeholder="Digite seu e-mail"
+                           Keyboard="Email"
+                           ReturnType="Next"/>
+
+                    <Label Text="Data de Nascimento" FontSize="14" TextColor="{StaticResource Gray600}"/>
+                    <DatePicker Date="{Binding BirthDate}" 
+                                Format="dd/MM/yyyy"
+                                MaximumDate="{x:Static sys:DateTime.Now}"/>
+
+                    <Label Text="CPF/Documento" FontSize="14" TextColor="{StaticResource Gray600}"/>
+                    <Entry Text="{Binding IdDocument}" 
+                           Placeholder="000.000.000-00"
+                           Keyboard="Numeric"
+                           ReturnType="Done"/>
+
+                    <Button Text="Salvar Alteracoes" 
+                            Command="{Binding SaveCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White"
+                            CornerRadius="5"
+                            Margin="0,10,0,0"/>
+
+                    <ActivityIndicator IsRunning="{Binding IsBusy}" 
+                                       IsVisible="{Binding IsBusy}"
+                                       Color="{StaticResource Primary}"
+                                       HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Voltar" 
+                    Command="{Binding NavigateBackCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="{StaticResource Primary}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NAuth.Maui.Views.LoginPage"
+             Title="Login"
+             Shell.NavBarIsVisible="False">
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+            
+            <Label Text="Bem-vindo!" 
+                   FontSize="32" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20"/>
+
+            <Frame BorderColor="{StaticResource Primary}" 
+                   HasShadow="True"
+                   Padding="0"
+                   CornerRadius="10">
+                <VerticalStackLayout Padding="20" Spacing="15">
+                    
+                    <Label Text="E-mail" FontSize="14" TextColor="{StaticResource Gray600}"/>
+                    <Entry Text="{Binding Email}" 
+                           Placeholder="Digite seu e-mail"
+                           Keyboard="Email"
+                           ReturnType="Next"/>
+
+                    <Label Text="Senha" FontSize="14" TextColor="{StaticResource Gray600}"/>
+                    <Entry Text="{Binding Password}" 
+                           Placeholder="Digite sua senha"
+                           IsPassword="True"
+                           ReturnType="Done"/>
+
+                    <Button Text="Entrar" 
+                            Command="{Binding LoginCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White"
+                            CornerRadius="5"
+                            Margin="0,10,0,0"/>
+
+                    <ActivityIndicator IsRunning="{Binding IsBusy}" 
+                                       IsVisible="{Binding IsBusy}"
+                                       Color="{StaticResource Primary}"
+                                       HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Esqueci minha senha" 
+                    Command="{Binding NavigateToForgotPasswordCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="{StaticResource Primary}"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+                <Label Text="Nao tem conta?" VerticalOptions="Center"/>
+                <Button Text="Criar conta" 
+                        Command="{Binding NavigateToRegisterCommand}"
+                        BackgroundColor="Transparent"
+                        TextColor="{StaticResource Primary}"
+                        Padding="0"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
