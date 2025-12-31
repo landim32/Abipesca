@@ -45,10 +45,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <AndroidResource Remove="Platforms\Android\Resources\xml\network_security_config.xml" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.100" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
@@ -57,7 +53,7 @@
 		
 		<!-- Adicione estes pacotes para resolver dependências das DLLs legadas -->
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -66,12 +62,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="NAuth.ACL">
-	    <HintPath>..\Lib\NAuth.ACL.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NAuth.DTO">
-	    <HintPath>..\Lib\NAuth.DTO.dll</HintPath>
-	  </Reference>
 	  <Reference Include="NNews.ACL">
 	    <HintPath>..\Lib\NNews.ACL.dll</HintPath>
 	  </Reference>

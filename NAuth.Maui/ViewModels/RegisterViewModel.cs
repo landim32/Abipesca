@@ -97,14 +97,13 @@ namespace NAuth.Maui.ViewModels
                     return;
                 }
 
-                var newUser = new UserInfo
+                var newUser = new UserInsertedInfo
                 {
                     Name = Name,
                     Email = Email,
                     Password = Password,
                     BirthDate = BirthDate,
-                    IdDocument = IdDocument,
-                    Status = 1
+                    IdDocument = IdDocument
                 };
 
                 var result = await _userService.RegisterAsync(newUser);

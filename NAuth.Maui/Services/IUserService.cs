@@ -6,7 +6,7 @@ namespace NAuth.Maui.Services
 {
     public interface IUserService
     {
-        Task<UserInfo> RegisterAsync(UserInfo user);
+        Task<UserInfo> RegisterAsync(UserInsertedInfo user);
         Task<UserInfo> UpdateProfileAsync(UserInfo user);
         Task<bool> ChangePasswordAsync(string oldPassword, string newPassword);
         Task<bool> SendPasswordRecoveryAsync(string email);

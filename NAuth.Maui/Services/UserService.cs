@@ -15,7 +15,7 @@ namespace NAuth.Maui.Services
             _authService = authService;
         }
 
-        public async Task<UserInfo> RegisterAsync(UserInfo user)
+        public async Task<UserInfo> RegisterAsync(UserInsertedInfo user)
         {
             return await _userClient.InsertAsync(user);
         }

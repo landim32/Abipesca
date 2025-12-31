@@ -155,8 +155,8 @@ namespace Abipesca.Main
         {
 #if ANDROID
             return DeviceInfo.DeviceType == DeviceType.Virtual 
-                ? "https://10.0.2.2:5005" 
-                : "https://192.168.1.100:5005";
+                ? "http://10.0.2.2:5004" 
+                : "http://192.168.1.100:5004";
 #elif WINDOWS
             return "http://localhost:5004";
 #else
@@ -168,8 +168,8 @@ namespace Abipesca.Main
         {
 #if ANDROID
             return DeviceInfo.DeviceType == DeviceType.Virtual 
-                ? "https://10.0.2.2:5006" 
-                : "https://192.168.1.100:5006";
+                ? "http://10.0.2.2:5007" 
+                : "http://192.168.1.100:5007";
 #elif WINDOWS
             return "http://localhost:5007";
 #else
