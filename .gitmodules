@@ -1,0 +1,36 @@
+[submodule "NTools.API"]
+	path = NTools.API
+	url = https://github.com/emaginebr/NTools.API.git
+[submodule "NTools.DTO"]
+	path = NTools.DTO
+	url = https://github.com/emaginebr/NTools.DTO.git
+[submodule "NTools.ACL"]
+	path = NTools.ACL
+	url = https://github.com/emaginebr/NTools.ACL.git
+[submodule "NAuth.API"]
+	path = NAuth.API
+	url = https://github.com/emaginebr/NAuth.API.git
+[submodule "NAuth.DTO"]
+	path = NAuth.DTO
+	url = https://github.com/emaginebr/NAuth.DTO.git
+[submodule "nauth-react"]
+	path = nauth-react
+	url = https://github.com/emaginebr/nauth-react.git
+[submodule "nauth-app"]
+	path = nauth-app
+	url = https://github.com/emaginebr/nauth-app.git
+[submodule "NNews.API"]
+	path = NNews.API
+	url = https://github.com/emaginebr/NNews.API.git
+[submodule "NNews.DTO"]
+	path = NNews.DTO
+	url = https://github.com/emaginebr/NNews.DTO.git
+[submodule "nnews-react"]
+	path = nnews-react
+	url = https://github.com/emaginebr/nnews-react.git
+[submodule "nnews-app"]
+	path = nnews-app
+	url = https://github.com/emaginebr/nnews-app.git
+[submodule "BazzucaMedia"]
+	path = BazzucaMedia
+	url = https://github.com/emaginebr/BazzucaMedia.git

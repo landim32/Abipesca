@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git -C \"C:\\\\repos\\\\Abipesca\" log --oneline -10)",
+      "Bash(git -C \"C:\\\\repos\\\\Abipesca\" remote -v)",
+      "Bash(git -C \"C:\\\\repos\\\\Abipesca\" status --short)",
+      "Bash(git -C \"C:\\\\repos\\\\Abipesca\" diff --name-only HEAD)",
+      "Bash(git -C:*)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(git submodule add:*)",
+      "Bash(git submodule status:*)"
+    ]
+  }
+}
